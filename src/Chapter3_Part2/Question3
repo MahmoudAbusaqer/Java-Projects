@@ -1,0 +1,16 @@
+Question 3 Answer
+
+    The stream pipeline for List<Employee> contains different operations,
+ intermediate and terminal operations. 
+    First, we call the method stream to enable us to use its methods.
+ Then, for the intermediate operations, we used the operation filter to generate
+ a new stream according to the specified condition and to give a new number of stream objects.
+ After that, we used the map operation to map a new value to every object of the new stream 
+ that generated after the filter operation.
+ Then, for the terminal operations, we used the method groupingBy to classify the objects
+ in the stream by their departments and to calculate the number of the objects in that group.
+ Then we used collect operation to create a new collection of objects that were created from
+ the method groupingBy. Finally, we used forEach operation to perform the operations on
+ every key-value pair in the stream.
+
+By: Mahmoud Abusaqer

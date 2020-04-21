@@ -1,0 +1,6 @@
+ID: 3, Name: Omar, Major: CS, Grade: 87.6
+ID: 5, Name: Osama, Major: Art, Grade: 87.6
+ID: 2, Name: Mahmoud, Major: SD, Grade: 86.30000000000001
+ID: 1, Name: Ahmad, Major: CS, Grade: 84.4
+ID: 4, Name: Abood, Major: Art, Grade: 83.9
+ID: 6, Name: Haitam, Major: Art, Grade: 80.4

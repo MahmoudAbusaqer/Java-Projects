@@ -1,0 +1,32 @@
+.root {
+    -fx-background-image: url(img11.jpg);
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.label {
+
+    -fx-font-size: 14px;
+    -fx-font-family: 'Pacifico';
+}
+
+#label-Welcome {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-radius: 10px;
+    -fx-background-color: lightblue;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: cadetblue;
+}
+
+.radio-button{
+    -fx-text-fill: brown;
+    -fx-font-size: large;
+    -fx-font-weight: bold;
+}
