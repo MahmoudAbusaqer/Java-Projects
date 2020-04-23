@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane fx:id="rootPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="850.0" stylesheets="@../Question1/Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chapter4.Question2.Q2_StudentTableViewController">
+   <children>
+      <HBox prefHeight="443.0" prefWidth="844.0" spacing="50.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="432.0" prefWidth="293.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="72.0" prefWidth="293.0" text="Student Information" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="283.0" prefWidth="293.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="37.0" text="ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledId" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="45.0" text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledName" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="48.0" text="Major">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledMajor" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="47.0" text="Grade">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledGrade" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+            <TableView fx:id="studentTableView" prefHeight="437.0" prefWidth="435.0">
+               <columns>
+                  <TableColumn fx:id="tcId" prefWidth="107.0" text="ID" />
+                  <TableColumn fx:id="tcName" prefWidth="130.0" text="Name" />
+                  <TableColumn fx:id="tcMajor" prefWidth="101.0" text="Major" />
+                  <TableColumn fx:id="tcGrade" minWidth="0.0" prefWidth="96.0" text="Grade" />
+               </columns>
+               <HBox.margin>
+                  <Insets top="20.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="85.0" prefWidth="821.0" spacing="25.0">
+         <children>
+            <Button fx:id="addButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addButtonHandle" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Question1/Style.css" text="Add" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="editButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editButtonHandle" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Question1/Style.css" text="Edit" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteButtonHandle" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Question1/Style.css" text="Delete" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="registrationPage" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#registrationPageHandle" prefHeight="35.0" prefWidth="150.0" stylesheets="@../Question1/Style.css" text="Registration Page" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </HBox>
+      <TextArea fx:id="textArea" prefHeight="111.0" prefWidth="820.0" promptText="Write your SQL query here" style="-fx-text-fill: #9b65e6;">
+         <font>
+            <Font name="Monospaced Bold" size="16.0" />
+         </font>
+      </TextArea>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="561.0" prefHeight="85.0" prefWidth="821.0" spacing="25.0">
+         <children>
+            <Button id="q2" fx:id="aButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#aButtonHandle" prefHeight="35.0" prefWidth="150.0" text="Choice A" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <stylesheets>
+                  <URL value="@../Question1/Style.css" />
+                  <URL value="@Style.css" />
+               </stylesheets>
+            </Button>
+            <Button id="q2" fx:id="bButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#bButtonHandle" prefHeight="35.0" prefWidth="150.0" text="Choice B" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <stylesheets>
+                  <URL value="@../Question1/Style.css" />
+                  <URL value="@Style.css" />
+               </stylesheets>
+            </Button>
+            <Button id="q2" fx:id="cButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#cButtonHandle" prefHeight="35.0" prefWidth="150.0" text="Choice C" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <stylesheets>
+                  <URL value="@../Question1/Style.css" />
+                  <URL value="@Style.css" />
+               </stylesheets>
+            </Button>
+            <Button id="q2" fx:id="dButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#dButtonHandle" prefHeight="35.0" prefWidth="150.0" text="Choice D" textAlignment="CENTER">
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <stylesheets>
+                  <URL value="@../Question1/Style.css" />
+                  <URL value="@Style.css" />
+               </stylesheets>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</FlowPane>
