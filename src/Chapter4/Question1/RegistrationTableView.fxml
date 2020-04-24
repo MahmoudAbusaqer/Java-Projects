@@ -16,6 +16,11 @@
          <children>
             <VBox alignment="CENTER" prefHeight="432.0" prefWidth="293.0">
                <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="109.0" text="Question 1" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
                   <Label alignment="CENTER" prefHeight="72.0" prefWidth="293.0" text="Registration Information" textAlignment="CENTER" underline="true">
                      <font>
                         <Font name="Arial Bold Italic" size="24.0" />
