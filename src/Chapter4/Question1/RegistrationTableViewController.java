@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
@@ -37,20 +38,20 @@ public class RegistrationTableViewController implements Initializable {
     @FXML
     private TextField textFiledSemester;
     @FXML
-    private TableColumn<Student, Integer> tcStudentId;
+    private TableColumn<Registration, Integer> tcStudentId;
     @FXML
-    private TableColumn<Student, Integer> tcCourseId;
+    private TableColumn<Registration, Integer> tcCourseId;
     @FXML
-    private TableColumn<Student, String> tcSemester;
+    private TableColumn<Registration, String> tcSemester;
     @FXML
     private Button addButton;
     @FXML
     private Button studentPage;
     @FXML
-    private TableView<?> registrationTableView;
+    private TableView<Registration> registrationTableView;
     @FXML
     private FlowPane rootPane;
-    
+
     Statement statement;
 
     /**
@@ -70,7 +71,13 @@ public class RegistrationTableViewController implements Initializable {
         tcStudentId.setCellValueFactory(new PropertyValueFactory("studentId"));
         tcCourseId.setCellValueFactory(new PropertyValueFactory("courseId"));
         tcSemester.setCellValueFactory(new PropertyValueFactory("semester"));
-//        studentTableView.getSelectionModel().selectedItemProperty().addListener(listener -> selectStudent());
+        if (rootPane.isVisible()) {
+            try {
+                showStudents();
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 
     @FXML
@@ -81,7 +88,7 @@ public class RegistrationTableViewController implements Initializable {
         String sql = "insert into registration values(" + studentId + ", " + courseId + ", '" + semester + "')";
         this.statement.executeUpdate(sql);
         clearFields();
-//        showStudents();
+        showStudents();
     }
 
     @FXML
@@ -90,28 +97,17 @@ public class RegistrationTableViewController implements Initializable {
         rootPane.getChildren().setAll(flowPane);
     }
 
-//    private void showStudents() throws SQLException {
-//        ResultSet resultSet = this.statement.executeQuery("select * from registration");
-//        registrationTableView.getItems().clear();
-//        while (resultSet.next()) {
-//            Student student = new Student();
-//            student.setId(resultSet.getInt("id"));
-//            student.setName(resultSet.getString("name"));
-//            student.setMajor(resultSet.getString("major"));
-//            registrationTableView.getItems().add(resultSet.);
-//
-//        }
-//    }
-//
-//    private void selectStudent() {
-//        Student student = registrationTableView.getSelectionModel().getSelectedItem();
-//        if (student != null) {
-//            textFiledStudentId.setText(String.valueOf(student.getId()));
-//            textFiledSemester.setText(student.getName());
-//            textFiledCourseId.setText(String.valueOf(student.getGrade()));
-//        }
-//
-//    }
+    private void showStudents() throws SQLException {
+        ResultSet resultSet = this.statement.executeQuery("select * from registration");
+        registrationTableView.getItems().clear();
+        while (resultSet.next()) {
+            Registration registration = new Registration();
+            registration.setStudentId(resultSet.getInt("studentId"));
+            registration.setCourseId(resultSet.getInt("courseId"));
+            registration.setSemester(resultSet.getString("semester"));
+            registrationTableView.getItems().add(registration);
+        }
+    }
 
     private void clearFields() {
         textFiledStudentId.setText("");

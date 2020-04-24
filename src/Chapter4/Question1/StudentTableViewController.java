@@ -151,7 +151,6 @@ public class StudentTableViewController implements Initializable {
             textFiledMajor.setText(student.getMajor());
             textFiledGrade.setText(String.valueOf(student.getGrade()));
         }
-
     }
 
     private void clearFields() {
