@@ -33,7 +33,6 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Student.excellentGrade", query = "SELECT s FROM Student s WHERE s.grade >= :grade"),
     @NamedQuery(name = "Student.allPassOrderName", query = "SELECT s FROM Student s WHERE s.grade >= :grade ORDER BY s.name"),
     @NamedQuery(name = "Student.CSandGrade", query = "SELECT s FROM Student s WHERE s.major = :major AND s.grade < :grade")
-//    @NamedQuery(name = "Student.updateCSandGrade", query = "UPDATE Student s SET s.grade = grade+3 WHERE s.major = :major AND s.grade < :grade")
 })
 public class Student implements Serializable {
 
