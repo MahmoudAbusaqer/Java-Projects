@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import java.net.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane fx:id="rootPane" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1185.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chapter5.Question1.StudentTableViewController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="549.0" prefWidth="293.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="109.0" text="Question 1" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="287.0" prefWidth="293.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="72.0" prefWidth="293.0" text="Student Information" textAlignment="CENTER" textFill="#e0108a" underline="true">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="283.0" prefWidth="293.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="23.0" prefWidth="86.0" text="Student ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledStudentId" alignment="TOP_CENTER" onAction="#textFiledStudentIdHandle" style="-fx-background-radius: 10;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="45.0" text="Name">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledName" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="48.0" text="Major">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledMajor" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="33.0" prefWidth="47.0" text="Grade">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledGrade" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" top="15.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="308.0" prefWidth="293.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="293.0" text="Registration Information" textAlignment="CENTER" textFill="#e0108a" underline="true">
+                     <font>
+                        <Font name="Arial Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <VBox alignment="CENTER" prefHeight="149.0" prefWidth="293.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="34.0" prefWidth="80.0" text="Course ID">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledCourseId" alignment="TOP_CENTER" onAction="#textFiledCourseIdHandle" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="79.0" text="Semester">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="textFiledSemester" alignment="TOP_CENTER" style="-fx-background-radius: 10;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+         <FlowPane.margin>
+            <Insets top="15.0" />
+         </FlowPane.margin>
+      </VBox>
+      <HBox prefHeight="583.0" prefWidth="833.0" spacing="20.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="543.0" prefWidth="554.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="121.0" text="Student Table" textAlignment="CENTER" textFill="#c60e0e">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="studentTableView" maxWidth="435.0" prefHeight="488.0" prefWidth="433.0">
+                    <columns>
+                      <TableColumn fx:id="tcStudentId" prefWidth="107.0" text="Student ID" />
+                      <TableColumn fx:id="tcStudentName" prefWidth="117.0" text="Name" />
+                        <TableColumn fx:id="tcMajor" prefWidth="127.0" text="Major" />
+                        <TableColumn fx:id="tcGrade" minWidth="0.0" prefWidth="83.0" text="Grade" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="543.0" prefWidth="438.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="25.0" prefWidth="173.0" text="Registration Table" textAlignment="CENTER" textFill="#c60e0e">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="registrationTableView" prefHeight="443.0" prefWidth="340.0">
+                     <columns>
+                        <TableColumn fx:id="tcStudentIdR" prefWidth="107.0" text="Student ID" />
+                        <TableColumn fx:id="tcCourseId" prefWidth="130.0" text="Course ID" />
+                        <TableColumn fx:id="tcSemester" prefWidth="101.0" text="Semester" />
+                     </columns>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+         <FlowPane.margin>
+            <Insets />
+         </FlowPane.margin>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="81.0" prefWidth="787.0" spacing="25.0">
+         <children>
+            <Button fx:id="addStudentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addButtonHandle" prefHeight="35.0" prefWidth="200.0" stylesheets="@Style.css" text="Add Student" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="editStudentButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#editButtonHandle" prefHeight="35.0" prefWidth="200.0" stylesheets="@Style.css" text="Edit Student" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="deleteButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#deleteButtonHandle" prefHeight="35.0" prefWidth="200.0" stylesheets="@Style.css" text="Delete Student" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="addRegistration" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addRegistrationHandle" prefHeight="35.0" prefWidth="200.0" stylesheets="@Style.css" text="Add New Registration" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Rockwell Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <FlowPane.margin>
+            <Insets left="300.0" />
+         </FlowPane.margin>
+      </HBox>
+   </children>
+</FlowPane>
