@@ -33,8 +33,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Registration implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    @Column(name = "semester")
-    private String semester;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
@@ -46,6 +44,8 @@ public class Registration implements Serializable {
     @JoinColumn(name = "courseId", referencedColumnName = "id")
     @ManyToOne
     private Course courseId;
+    @Column(name = "semester")
+    private String semester;
 
     public Registration() {
     }
