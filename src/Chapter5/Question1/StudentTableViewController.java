@@ -148,9 +148,6 @@ public class StudentTableViewController implements Initializable {
         Student student = (Student) em.createNamedQuery("Student.findById")
                 .setParameter("id", Integer.parseInt(textFiledStudentId.getText()))
                 .getSingleResult();
-        student.setName(textFiledName.getText());
-        student.setMajor(textFiledMajor.getText());
-        student.setGrade(Double.parseDouble(textFiledGrade.getText()));
         em.getTransaction().begin();
         em.remove(student);
         em.getTransaction().commit();
