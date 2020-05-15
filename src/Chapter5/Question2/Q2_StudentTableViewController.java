@@ -162,9 +162,6 @@ public class Q2_StudentTableViewController implements Initializable {
         Student student = (Student) em.createNamedQuery("Student.findById")
                 .setParameter("id", Integer.parseInt(textFiledStudentId.getText()))
                 .getSingleResult();
-        student.setName(textFiledName.getText());
-        student.setMajor(textFiledMajor.getText());
-        student.setGrade(Double.parseDouble(textFiledGrade.getText()));
         em.getTransaction().begin();
         em.remove(student);
         em.getTransaction().commit();
@@ -240,7 +237,8 @@ public class Q2_StudentTableViewController implements Initializable {
         em.getTransaction().begin();
         students.stream().map((student) -> {
             student.setGrade(student.getGrade() + 3);
-            return student;})
+            return student;
+        })
                 .forEachOrdered((student) -> {
                     em.merge(student);
                 });
